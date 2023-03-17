@@ -4,10 +4,10 @@ import Sidebar from "./SidebarAdmin";
 
 export default function Layout() {
     return (
-        <div className="flex flex-row bg-neutral-100 min-w-min min-h-screen ">
+        <div className="flex flex-row bg-neutral-100 min-h-screen ">
             <Sidebar />
             <div className="flex-1">
-                <div> <Outlet /> </div>
+                <Outlet />
             </div>
         </div>
     )

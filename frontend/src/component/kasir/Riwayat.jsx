@@ -82,7 +82,7 @@ export default function Riwayat() {
                             <tr key={transaksi.id_transaksi} className="hover:bg-gray-50">
                                 <td className="px-6 py-4">{transaksi.nama_pelanggan}</td>
                                 <td className="px-6 py-4">Meja nomor {transaksi.meja.nomor_meja}</td>
-                                <td className="px-6 py-4">{transaksi.total}</td>
+                                <td className="px-6 py-4">Rp{transaksi.total.toLocaleString('id-ID')}</td>
                                 <td className="px-6 py-4">
                                     {transaksi.status === "belum_bayar" ? (
                                         <div className="flex gap-2">

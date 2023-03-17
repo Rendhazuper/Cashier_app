@@ -155,19 +155,8 @@ export default function Pemesanan() {
             
             <div className='flex-row items-center justify-between'>
                 {/* <h6 className="mt-6 ml-5 text-4xl font-sans font-semibold">Makanan</h6> */}
-                {/* <select onChange={handleSelectChange} className="pointer-events-auto text-sm rounded-lg block p-2.5 bg-blue-500 my-24 mx-8 float-right py-3 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500">
-                    <option value="">Pilih meja pelanggan</option>
-                    {meja.map((option) => (
-                        <option
-                            key={option.id_meja}
-                            value={option.nomor_meja}
-                            disabled={option.status === "tidak_tersedia"}
-                        >
-                            Meja nomor {option.nomor_meja}
-                        </option>
-                    ))}
-                </select> */}
-                <div className="flex flex-wrap gap-5 mt-5 ml-5">
+                
+                {/* <div className="flex flex-wrap gap-5 mt-5 ml-5">
                     {menu.map((menu) => {
                         if (menu.jenis === 'makanan') {
                             return (
@@ -185,7 +174,6 @@ export default function Pemesanan() {
                                                 <button onClick={() => handleIncreaseClick(menu.id_menu)} type="button" className="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 ">
                                                     +
                                                 </button>
-                                                <button onClick={checkPemesanan} className='fixed right-0 top-100 pointer-events-auto bottom-0 my-8 mx-8  float-right px-10 py-3 rounded-lg bg-blue-600 text-white'>Pesan</button>
                                             </div>
                                         </div>
                                     </div>
@@ -193,9 +181,10 @@ export default function Pemesanan() {
                             )
                         } return null
                     })}
-                </div>
+                </div> */}
                 <h6 className="mt-6 ml-5 text-4xl font-sans font-semibold">Minuman</h6>
                 <div className="w-full flex-row items-center justify-between flex flex-wrap gap-5 mt-5 ml-5">
+                    
                     {menu.map((menu) => {
                         if (menu.jenis === 'minuman') {
                             return (
@@ -218,11 +207,24 @@ export default function Pemesanan() {
                                         </div>
                                     </div>
                                 </div>
+                                
                             )
                         } return null
                     })}
+                    {/* <select onClick={setShowModal} onChange={handleSelectChange} className="pointer-events-auto text-sm rounded-lg block p-2.5 bg-blue-500 my-24 mx-8 float-right py-3 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500">
+                    <option value="">Pilih meja pelanggan</option>
+                    {meja.map((option) => (
+                        <option
+                            key={option.id_meja}
+                            value={option.nomor_meja}
+                            disabled={option.status === "tidak_tersedia"}
+                        >
+                            Meja nomor {option.nomor_meja}
+                        </option>
+                    ))}
+                </select> */}
                     
-                    
+                     <button onClick={checkPemesanan} className='fixed right-0 top-100 pointer-events-auto bottom-0 my-8 mx-8  float-right px-10 py-3 rounded-lg bg-blue-600 text-white'>Pesan</button>
                 </div>
             </div>
             {/* <div className='bottom-0 w-full pointer-events-none'>
@@ -304,8 +306,7 @@ export default function Pemesanan() {
                             Meja nomor {option.nomor_meja}
                         </option>
                     ))}
-                </select> 
-                                    </div>
+                </select>             </div>
                                     <div className="mt-6">
                                         <button type="submit" className="w-full flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700">
                                             Checkout

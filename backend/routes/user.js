@@ -32,7 +32,7 @@ app.get("/", auth, (req, res) => {
 })
 
 //endpoint untuk melihat user berdasarkan id
-app.get("/:id_user", auth, (req, res) => {
+app.get("/:id_user", (req, res) => {
     let param = { id_user: req.params.id_user }
 
     user.findOne({ where: param })
@@ -49,7 +49,7 @@ app.get("/:id_user", auth, (req, res) => {
 })
 
 //endpoint untuk menyimpan data user, METHOD: POST, function: create
-app.post("/", auth, (req, res) => {
+app.post("/", (req, res) => {
     let data = {
         nama_user: req.body.nama_user,
         role: req.body.role,

@@ -14,7 +14,9 @@ import EditMenu from './component/admin/menu/EditMenu';
 import Meja from './component/admin/meja/Meja';
 
 //kasir pages
+// import Makanan from './component/kasir/Makanan';
 import LayoutKasir from './component/shared/LayoutKasir';
+import Minuman from './component/kasir/Minuman';
 import Pemesanan from './component/kasir/Pemesanan';
 import Riwayat from './component/kasir/Riwayat'
 
@@ -60,6 +62,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LayoutKasir />}>
             <Route index element={<Pemesanan />} />
+            <Route path="/Minuman" element={<Minuman />} />
             <Route path="/riwayat" element={<Riwayat />} />
           </Route>
           <Route path='*' element={<NotFound />} />
